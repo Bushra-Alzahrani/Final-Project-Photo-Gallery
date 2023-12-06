@@ -1,0 +1,85 @@
+
+html {
+    scroll-behavior: smooth;
+  }
+  body {
+      background-color: white;
+  }
+  h1 {
+      text-align: center;
+      font-family:Arial, sans-serif;
+      font-size: 32px;
+  }
+  a {
+      color: #000;
+      text-decoration: none;
+      font-family:Arial, sans-serif;
+  }
+  figcaption {
+    background-color: white;
+    color: black;
+    font-style: italic;
+    padding: 0px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .grid figure{
+        border: 5px solid green;
+  }
+  @media (prefers-color-scheme: dark) {
+    /* Dark theme styles go here */
+      body {
+        background-color: white;
+      }
+      figcaption {
+      background-color: black;
+      color: yellow;
+      }
+      .grid figure{
+        border: 5px solid black;
+      }
+  }
+  p {
+     font-size: 25px;
+     font-family:Arial, sans-serif;
+  }
+  .grid {
+      display: grid;
+      grid-template-columns: 100%;
+      justify-content: space-evenly;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      text-align: center;
+  }
+  .grid img{
+      width: 100%;
+  }
+  @media screen and (min-width: 772px) {
+      
+      .grid {
+          grid-template-columns: 45% 45%;
+          align-items: center;
+      }
+      .grid figure:last-child{
+          grid-column: span 2;
+      }
+      .grid figure {
+          border-radius: 50%;
+           overflow: hidden;
+      }	
+  }
+  @media screen and (min-width: 992px) {
+      .grid figure:nth-child(3n){
+          grid-column: 1 / span 2;
+      }
+      .grid figure {
+          border-radius: 0%;
+           overflow: hidden;
+      }
+  }
+  @media (prefers-reduced-motion) {
+    html {
+    scroll-behavior: auto;
+      }
+  }
+  
